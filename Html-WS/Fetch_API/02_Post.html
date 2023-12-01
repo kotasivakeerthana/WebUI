@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnPostData()
+        {
+            var data={
+                id:101,
+                first_name:'steve',
+                last_name:'jobs',
+                email:'steve250@gmail.com'
+            }
+            fetch('https://reqres.in/api/users',{
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify(data)
+            }).then(function(result){
+                if(result.status==201)
+                {
+                    alert('Record Saved Succesfully!')
+                }
+            })
+        }
+    </script>
+</head>
+<body onload="fnPostData()">
+    
+</body>
+</html>

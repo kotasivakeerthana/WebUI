@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function test()
+        {
+            var products=[
+                {id:1,name:'Iphone 15',price:75000},
+                {id:2,name:'Iphone 15 Pro',price:96000},
+                {id:3,name:'Iphone 13 Mini',price:58000},
+                {id:4,name:'Samsung S23',price:78000},
+                {id:5,name:'Samsung S23 Ultra',price:97500}
+            ]
+
+            document.write("<table border='1'>")
+                document.write('<tr><th>Id</th><th>Title</th><th>Price</th></tr>')
+                for(var i=0;i<products.length;i++)
+                {
+                    document.write('<tr>')
+                        document.write('<td>'+products[i].id+'</td>')
+                        document.write('<td>'+products[i].name+'</td>')
+                        document.write('<td>'+products[i].price+'</td>')
+                    document.write('</tr>')
+                }
+            document.write('</table>')
+        }
+    </script>
+</head>
+<body onload="test()">
+    
+</body>
+</html>

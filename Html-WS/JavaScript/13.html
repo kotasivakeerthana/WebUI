@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnSetValues()
+        {
+            var v1=document.getElementById('v1')
+            var v2=document.getElementById('v2')
+            v1.value=0
+            v2.value=0
+        }
+        function sum()
+        {
+            var v1=document.getElementById('v1')
+            var v2=document.getElementById('v2')
+
+           
+            var res=document.getElementById('lblMsg')
+
+            var sum=parseInt(v1.value)+parseInt(v2.value)
+
+            res.innerHTML='Sum:'+sum
+        }
+    </script>
+</head>
+<body onload="fnSetValues()">
+    <input type="text" id="v1" name="v1" onkeyup="sum()"/>
+    <br/>
+    <input type="text" id="v2" name="v2" onkeyup="sum()"/>
+    <br/>
+    <label id="lblMsg"></label>
+</body>
+</html>

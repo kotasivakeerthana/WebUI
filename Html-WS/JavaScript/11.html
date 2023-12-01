@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnDemo()
+        {
+            var name=document.getElementById('txtName')
+            name.setAttribute('placeholder','Enter Name Here')
+            console.log(name.value)
+            alert(name.value)
+            name.value=''
+            name.focus()
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtName" name="txtName"/>
+    <br/>
+    <button onclick="fnDemo()">Click Me</button>
+</body>
+</html>

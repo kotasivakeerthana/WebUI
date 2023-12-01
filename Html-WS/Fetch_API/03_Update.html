@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnUpdateData()
+        {
+            var data={
+                id:101,
+                first_name:'steve',
+                last_name:'jobs',
+                email:'stevejobs123@gmail.com'
+            }
+            fetch('https://reqres.in/api/users/101',{
+                method:'PUT',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify(data)
+            }).then(function(result){
+                if(result.status==200)
+                {
+                    alert('Record Updated Succesfully!')
+                }
+            })
+        }
+    </script>
+</head>
+<body onload="fnUpdateData()">
+    
+</body>
+</html>

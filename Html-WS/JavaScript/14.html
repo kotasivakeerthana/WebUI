@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnGet()
+        {
+            var city=document.getElementById('ddlcity')
+            //alert(city.value)
+            document.getElementById('lblMsg').innerHTML='Selected City:'+city.value
+
+            if(city.value=="Others")
+            {
+                document.getElementById('d1').style.display=''
+            }
+            else{
+                document.getElementById('d1').style.display='none'
+            }
+        }
+    </script>
+</head>
+<body>
+    <select id="ddlcity" onchange="fnGet()">
+        <option value="">--select--</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Pune">Pune</option>
+        <option value="Others">Others</option>
+    </select>
+    <br/>
+    <label id="lblMsg"></label>
+<br/>
+<div id="d1" style="display: none;">
+city Name:<input type="text"/>
+</div>
+
+</body>
+</html>

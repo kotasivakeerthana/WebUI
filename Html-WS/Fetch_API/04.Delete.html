@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function fnDeleteData()
+        {
+            fetch('https://reqres.in/api/users/101',{
+                method:'DELETE',
+                headers:{'Content-Type':'application/json'}
+            }).then(function(result){
+                if(result.status==204)
+                {
+                    alert('Record Deleted Succesfully!')
+                }
+            })
+        }
+    </script>
+</head>
+<body onload="fnDeleteData()">
+    
+</body>
+</html>
